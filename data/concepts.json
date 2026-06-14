@@ -3,7 +3,7 @@
   "Class": "biological",
   "Concept": "audibility",
   "Mapping": "unipolar",
-  "Description": "The structural intensity of sound waves, acoustic properties, or volume levels perceived by an auditory system. Scales from absolute soundless silence up to explosive, deafening sonic force."
+  "Description": "Measures a word's association with the volume levels perceived by an auditory system. Scales from absolute soundless silence up to explosive, deafening sonic force."
  },
  {
   "Class": "biological",
@@ -361,7 +361,7 @@
  },
  {
   "Class": "syntax",
-  "Concept": "quesiton",
+  "Concept": "question",
   "Mapping": "unipolar",
   "Description": "Measures the presence of inquisitive or interrogative syntax. Maps to wh-words (e.g., 'who', 'what', 'why'), interrogative auxiliary verbs, or explicit markers used to initiate or formulate questions. Scales from standard declarative language (0.0) up to a dedicated interrogative operator (4.0)."
  },

@@ -1,5 +1,3 @@
-You are evaluating words for their relationship to the unipolar concept {C}. This concept is defined as follows:
-{D}
 Evaluate the following word(s) by applying the relevant number based on the scale below.
 Scale: [0.0 to 4.0]
 0.0: Neutral / Absolute irrelevance to the concept.
@@ -10,5 +8,3 @@ Scale: [0.0 to 4.0]
 
 Note: You must use decimal values (e.g., 1.5, 2.8) to capture precise nuances between these levels. 
 Do not assume a strict linear or exponential mathematical spacing. Score based on semantic intensity. 
-Only generate results in the form "word:value" but exclude the quotes. 
-Do not include rationale.

@@ -1,7 +1,3 @@
-You are evaluating words for their relationship to the bipolar concept {C}. This concept is defined as a continuum between two polar opposites, where negative values represent one extreme, positive values represent the opposing extreme, and 0.0 represents a neutral base state or total irrelevance.
-The concept {C} is defined as follows:
-{D}
-
 Evaluate the following word(s) by applying the relevant number based on the scale below.
 Scale: [-4.0 to +4.0]
 -4.0: Extreme Negative / The absolute pinnacle of the negative extreme.
@@ -16,5 +12,3 @@ Scale: [-4.0 to +4.0]
 
 Note: You must use decimal values (e.g., -1.5, 2.8) to capture precise nuances along this bidirectional continuum. 
 Do not assume a strict linear or exponential mathematical spacing. Score based on semantic intensity. 
-Only generate results in the form "word:value" but exlcude the quotes. 
-Do not include rationale.
