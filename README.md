@@ -31,7 +31,7 @@ For a human readable list of concepts, see [docs/concept_descriptions.md](https:
 
 **Distillation:** A model is requested to use a 5-point scale [ 0-4 ] to rank the relationship between a given word and a predefined set of concepts. 
 - This scale was chosen to allow a model to easily provide a numerical score for a given word such as "boy" and a given concept such as "gender" which doesn't have numerical significance. Or to allow objects on massively different scales to be mapped without having to take account of differing physical units or absurd number scales. E.g. the word "universe" vs. the word "atom" when evaluated under the concept of "scale". 
-- The five point numerical scales mapes to five ordinal relevance categories: irrelevant (0), minor (1), moderate (2), major (3), and extreme (4)
+- The five point numerical scale maps to five ordinal relevance categories: irrelevant (0), minor (1), moderate (2), major (3), and extreme (4)
 - During ranking, each word is passed statelessly with a system prompt defined by templates built from files within prompt directory to avoid context drift. See the function distill() from distill.py
 
 **Normalization:** No normalization has been applied to the vector database, but tanh or sigmoid is the end target. *Note: Cosine similarity does not work on these vectors.*
