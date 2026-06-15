@@ -9,3 +9,10 @@
     - concept: conditional; Description: tokens that are assocaited with conditional logic (and, <, or, !, etc.)
   - extensions of these sort might provide easier training for special use cases.
   - Smaller spaces like this don't actually need model distillation. They can be specified manually and added into the vector-database or even joined directly with pre-existing distilled vectors where relevant via a vector component sum
+  - Speech style should also be injectable directly into a model with a "speech_style" concept. 
+    - Take all words that have likely usage from a particular speech archetype. 
+    - Given them a value or 1
+    - Do the inverse for words that shouldn't be used in a particular speech style
+    - do a vector component sum against the database.
+    - This could be thought of as a more general control over the explicit insult/formality concepts.
+    - An analysis of word count could be done to the speech of desired individuals then used to nudge the model to a given word choice.
