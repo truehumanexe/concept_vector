@@ -6,4 +6,4 @@
     - concept: loop; Description: tokens that are associated with the beginning of a loop (while, for, etc.)
     - concept: conditional; Description: tokens that are assocaited with conditional logic (and, <, or, !, etc.)
   - extensions of these sort might provide easier training for special use cases.
-  - Smaller spaces like this don't actually need model distillation. They can be specified manually and add into the vector-database or even joined directly with pre-existing distilled vectors where relevant via a vector component sum
+  - Smaller spaces like this don't actually need model distillation. They can be specified manually and added into the vector-database or even joined directly with pre-existing distilled vectors where relevant via a vector component sum

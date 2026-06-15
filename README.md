@@ -13,33 +13,39 @@ This project has the following objectives:
     - Given the following vectors: [ Static ]; [ Dynamic || Trainable ] 
     - The static component is predefined during the distillation process, locked, and treated as a reference
     - The dynamic component is a copy of the static component that is combined with the trainable/undefined components and passed through attention/transformer layers
-    - The trainable components allow an llm to generate meaning that goes beyond the scope of concept-vectors
+    - The trainable components allow an LLM to generate meaning that goes beyond the scope of concept-vectors
     - Changes between the static vector and dynamic vector components are measurable
 
 **END**
 
+## Demo
 
-**Concerns**
-- Concept-vectors lose the clean vector math associated with systems like word2vec and the implications of this are unclear.
-- Generating a large vector vocabulary via distillation requires significant resources, so this repo only serves as a small demonstration of the idea.
-- vector dot product, while functional, no longer seems to be the best metric for vector searching. Min error might serve as a better search, but requires a more complicated searching logic.
+For a demonstration of semantic searching of concept vectors see notebooks/scratch.ipynb
+
+For a human readable list of concepts, see docs/concept_descriptions.md
 
 
 ## Design
 
 **Method:** This project was made in tandem with Gemini for ideation, feedback, and iteration, as well as meta-llama-3.1-8b-instruct for the distillation process.
 
-**Distillation:** A model is requested to use a 5-point scale [0-4] to rank the relationship between a given word and a predefined set of concepts. 
+**Distillation:** A model is requested to use a 5-point scale [ 0-4 ] to rank the relationship between a given word and a predefined set of concepts. 
 - This scale was chosen to allow a model to easily provide a numerical score for a given word such as "boy" and a given concept such as "gender" which doesn't have numerical significance. Or to allow objects on massively different scales to be mapped without having to take account of differing physical units or absurd number scales. E.g. the word "universe" vs. the word "atom" when evaluated under the concept of "scale". 
-- Four points were chosen to match five ordinal relevance categories: irrelevant (0), minor (1), moderate (2), major (3), and extreme (4)
+- The five point numerical scales mapes to five ordinal relevance categories: irrelevant (0), minor (1), moderate (2), major (3), and extreme (4)
 - During ranking, each word is passed statelessly with a system prompt defined by templates built from files within prompt directory to avoid context drift. See the function distill() from distill.py
 
-**Normalization:** No normalization has been applied to the vector database, but tanh or sigmoid is the end target. *Cosine similarity does not work on these vectors.*
+**Normalization:** No normalization has been applied to the vector database, but tanh or sigmoid is the end target. *Note: Cosine similarity does not work on these vectors.*
+
+**Concerns**
+- Concept-vectors lose the clean vector math associated with systems like word2vec and the implications of this are unclear.
+- Generating a large vector vocabulary via distillation requires significant resources, so this repo only serves as a small demonstration of the idea.
+- vector dot product, while functional, may not be the best vector search method. There is a need for exploration of optimal searching.
 
 ## Misc.
-See docs/ for a human readable overview of concepts, and their descriptions, as well as an example of prompt templates for the distillation process
 
-See notes/ for speculative use and extensions for the concept vector.
+For future work direction and speculative use cases, see /notes
 
-See notebooks/scratch.ipynb for an example of searching vectors based on concepts.
+
+
+
 
