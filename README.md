@@ -2,8 +2,10 @@
 
 I'm leaving this repo up for posterity, but with respect to my initial ideas, this does not seem to be a worthile path to pursue. While the extraction of an LLMs interpretation of words is interesting, trying to use these vectors as a smaller source for the gradient descent/learning process runs into the following issues: 
 
-1) The intial value of the vectors are irrelevant to a a model as long as they provide a unique ID for every token, so to match the behavior of a model using standard tokenization and vectors, a concept-vector would need to be an equivalent size to the standard vector. This means the efficiency goal can't be met. 
-2) The explicit meaning could be useful if this same process could be mapped on to true tokens and not full words, but true tokens (sub words) don't have any specific value until they are combined in inside a model and given a broader context. E.g. happ, could be a fragment from "happy" or a fragment from "happened". Trying to map subwords to a concept then pre filter them would be useless consequently.
+1) The intial value of the vectors are irrelevant to a model as long as the vectors provide a unique ID for every token, so to match the behavior of a model using standard tokenization and vectors, a concept-vector would need to be an equivalent size to the standard vector. This means the efficiency goal can't be met. 
+2) Mapping a core meaning to a vector could be useful if this same process could be mapped on to true tokens and not full words, but true tokens (sub words) don't have any specific value until they are combined inside a model and given a broader context. E.g. happ, could be a fragment from "happy" or a fragment from "happened". Trying to map subwords to a concept then pre filter them would be useless consequently.
+
+---
 
 
 The following is the prompt used to initialize work on this project (see [prompts/intro.md](https://github.com/truehumanexe/concept_vector/blob/main/prompts/intro.md)), and it serves as a good summary of the project as well as a good source for LLM evaluated critical feedback for the curious.
