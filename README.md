@@ -49,10 +49,6 @@ For a human readable list of concepts, see [docs/concept_descriptions.md](https:
 - Generating a large vector vocabulary via distillation requires significant resources, so this repo only serves as a small demonstration of the idea.
 - vector dot product, while functional, may not be the best vector search method. There is a need for exploration of optimal searching.
 
-## Misc.
-
-For future work direction and speculative use cases, see [/notes](https://github.com/truehumanexe/concept_vector/tree/main/notes)
-
 
 
 
